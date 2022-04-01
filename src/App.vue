@@ -10,7 +10,6 @@
 <script>
 
 import MainTabBar from "@/components/content/mainTabBar/MainTabBar";
-import Compute from "@/components/Compute";
 import NavBar from "@/components/common/navbar/NavBar";
 import HomeView from "@/views/home/HomeView";
 import ManyButton from "@/components/common/button/ManyButton";
@@ -25,7 +24,6 @@ export default {
     HomeView,
     MainTabBar,
     NavBar,
-    Compute,
     ManyButton
   }
 }

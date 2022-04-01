@@ -1,14 +1,13 @@
 <template>
   <div>
-    <h2>This is User</h2>
-    <h2> I'm {{userId}}</h2>
-    <Profile/>
+    <user-nav/>
   </div>
+  <user-menu/>
 </template>
 
 <script>
-import Profile from "@/components/Profile";
-
+import UserMenu from "@/views/user/childComps/UserMenu";
+import UserNav from "@/views/user/childComps/UserNav";
 export default {
   name: "UserView",
   computed:{
@@ -17,11 +16,17 @@ export default {
     }
   },
   components:{
-    Profile
+    UserMenu,
+    UserNav
   }
 }
 </script>
 
 <style scoped>
-
+div{
+  background-color: var(--el-color-white);
+  border-radius: 1rem;
+  margin: 0.7rem;
+  /*padding: 1rem;*/
+}
 </style>

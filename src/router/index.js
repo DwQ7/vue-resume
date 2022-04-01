@@ -1,15 +1,7 @@
 import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 import store from '@/store'
-// import HomeView from '../views/HomeView.vue'
-// import AboutView from "../views/AboutView";
-// import TestView from "@/views/TestView";
-// import UserView from "@/views/UserView";
 
-// which is lazy-loaded when the route is visited.
 const Home = () => import('@/views/home/HomeView')
-const HomeNews =() => import('@/views/home/childComps/HomeNews')
-const HomeMessages =() => import('@/views/home/childComps/HomeMessages')
-
 const Shop = () => import('@/views/shopping/ShopView')
 const Category = () => import('@/views/category/CategoryView')
 const User = () => import('@/views/user/UserView')
@@ -29,16 +21,6 @@ const routes = [
         path: '/',
         component: Home,
       },
-      {
-        path:'news',
-        name:'HomeNews',
-        component:HomeNews
-      },
-      {
-        path:'messages',
-        name:'HomeMessages',
-        component:HomeMessages
-      }
     ]
   },
   {

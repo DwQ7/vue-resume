@@ -10,12 +10,12 @@ export function request(options) {
 
         //2.拦截器
         instance.interceptors.request.use(res =>{
-            store.commit('showLoading',true)
+            // store.commit('showLoading',true)
             return res
         })
 
         instance.interceptors.response.use(res => {
-            store.commit('showLoading',false)
+            // store.commit('showLoading',false)
             return res.data
         })
 
