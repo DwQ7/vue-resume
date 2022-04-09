@@ -2,10 +2,6 @@ import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 import store from '@/store'
 
 const Home = () => import('@/views/home/HomeView')
-const Shop = () => import('@/views/shopping/ShopView')
-const Category = () => import('@/views/category/CategoryView')
-const User = () => import('@/views/user/UserView')
-const Detail = () =>import('@/views/detail/DetailView')
 const routes = [
   {
     path:'',
@@ -15,40 +11,8 @@ const routes = [
     path: '/home',
     name: 'home',
     component: Home,
-    tittle:'首页',
-    children:[
-      {
-        path: '/',
-        component: Home,
-      },
-    ]
+    tittle:'Home',
   },
-  {
-    path: '/shopping',
-    name: 'shop',
-    tittle:'购物',
-    component: Shop,
-
-  },
-  {
-    path:'/category',
-    name:'category',
-    tittle:'分类',
-    component: Category,
-
-  },
-  {
-    path: '/user',
-    name:'user',
-    tittle:'用户',
-    component: User,
-  },
-  {
-    path: '/detail/:iid',
-    name:'detail',
-    tittle:'详情',
-    component:Detail
-  }
 ]
 
 const router = createRouter({

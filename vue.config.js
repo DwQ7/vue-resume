@@ -54,7 +54,12 @@ module.exports = defineConfig({
           dts: 'components.d.ts'
         })
     )
-  }
+  },
+    //打包配置
+    // assetsDir: 'static',
+    // parallel: false,
+    // publicPath: './',
+
   // publicPath: process.env.NODE_ENV === 'production' ? '/site/vue-demo/' : '/',  // 公共路径
   // indexPath: 'index.html' , // 相对于打包路径index.html的路径
   // outputDir: process.env.outputDir || 'dist', // 'dist', 生产环境构建文件的目录

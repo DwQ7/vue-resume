@@ -1,30 +1,24 @@
 <template>
-  <router-view v-slot="{Component}">
-    <keep-alive>
-      <component :is="Component" :key="$route.name"  v-if="$route.meta.keepAlive" />
-    </keep-alive>
-  </router-view>
-  <main-tab-bar/>
+  <div id="app">
+    <router-view v-slot="{Component}">
+      <keep-alive>
+        <component :is="Component" :key="$route.name"  v-if="$route.meta.keepAlive" />
+      </keep-alive>
+    </router-view>
+  </div>
+
 </template>
 
 <script>
 
-import MainTabBar from "@/components/content/mainTabBar/MainTabBar";
-import NavBar from "@/components/common/navbar/NavBar";
-import HomeView from "@/views/home/HomeView";
-import ManyButton from "@/components/common/button/ManyButton";
+
 export default {
   name:'App',
   data(){
     return{
-      userId:'lisa'
     }
   },
   components:{
-    HomeView,
-    MainTabBar,
-    NavBar,
-    ManyButton
   }
 }
 </script>
@@ -33,4 +27,11 @@ export default {
   /*style中引用css固定写法*/
   @import "./assets/css/base.css";
 
+  #app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
